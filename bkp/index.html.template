@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Kanply</title>
+<!--        <link rel="stylesheet" href="style.css"> -->
+        <link rel="icon" href="images/logo-kanply.png">
+        <script src="./dom_manipulation.bundle.js"></script>
+    </head>
+    <body>
+    <!--    <header>
+            <div>
+                <img class="logo" src="./images/logo-kanply-square.png" alt="Kanply">
+            </div>
+            <nav>
+                <ul>
+                    <li>À propos</li>
+                    <li>Connexion</li>
+                    <li><b>EN</b></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="content">
+ 
+        </div>
+
+        <footer>
+            Copyright © Kanply 2023
+        </footer>
+    -->
+        <script src="./index.bundle.js"></script>
+    
+    </body>
+ </html>

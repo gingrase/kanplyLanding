@@ -1,0 +1,50 @@
+import hero_logo from './images/automation_green.png';
+import hero_image from './images/logo-kanply-long.png';
+import screenshot_image from './images/dashboard.png';
+
+function generateHomeContent() {
+    const top = document.createElement('div');
+        top.classList = "top";
+        const homeImages = document.createElement('div');
+            const heroLogoImage = new Image();
+                heroLogoImage.src = hero_logo;
+                heroLogoImage.alt = "Kanply's logo";
+                heroLogoImage.id = "hero_logo";
+            homeImages.appendChild(heroLogoImage);
+            const heroImageImage = new Image();
+                heroImageImage.src = hero_image;
+                heroImageImage.alt = "Kanply";
+                heroImageImage.id = "hero_image";
+            homeImages.appendChild(heroImageImage);
+        top.appendChild(homeImages);
+        const title = document.createElement('div');
+            title.classList = "title";
+            title.innerHTML = 'La conformité, facile.';
+        top.appendChild(title);
+        const topTextDesc = document.createElement('div');
+            topTextDesc.classList = "top_text";
+            topTextDesc.innerHTML = 'Étonnamment simple, mais en même temps complétement personnalisée,</br> Kanply réinvente la conformité en guidant vos efforts et en automatisant les tâches fastidieuses.';
+        top.appendChild(topTextDesc);
+        const topTextJoke = document.createElement('div');
+            topTextJoke.classList = "top_text";
+            topTextJoke.innerHTML = 'Avec Kanply, la conformité devient un party... ou au moins vous aurez plus de temps pour le faire&nbsp;!';
+        top.appendChild(topTextJoke);
+        const subscribeButton = document.createElement('button');
+            subscribeButton.classList = 'subscribe_button';
+            subscribeButton.innerText = "Inscrivez-vous sur la liste d'attente";
+        top.appendChild(subscribeButton);
+        const contactButton = document.createElement('button');
+            contactButton.classList = 'contact_button';
+            contactButton.innerText = "Contactez-nous";
+        top.appendChild(contactButton);
+        const screenshotContainer = document.createElement('div');
+            const screenshot = new Image();
+                screenshot.src = screenshot_image;
+                screenshot.alt = "Kanply's dashboard";
+                screenshot.id = "screenshot";
+            screenshotContainer.appendChild(screenshot);
+        top.appendChild(screenshotContainer);
+    return top.outerHTML; 
+}
+
+export default generateHomeContent;

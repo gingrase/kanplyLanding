@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Kanply</title>
+        <script src="main.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="images/logo-kanply.png">
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <div>
+                    <img class="logo" src="./images/logo-kanply-square.png" alt="Kanply">
+                </div>
+                <nav>
+                    <ul>
+                        <li>À propos</li>
+                        <li>Connexion</li>
+                        <li><b>EN</b></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="top">
+                <div>
+                    <img id="hero_logo" src="images/logo-kanply-prototype-white.png" alt="Kanply">
+                    <img id="hero_image" src="images/logo-kanply-long.png" alt="Kanply">
+                </div>
+                <div class="title">La conformité, facile.</div>
+                <div class="top_text">Étonnamment simple, mais en même temps complétement personnalisée,</br> Kanply réinvente la conformité en guidant vos efforts et en automatisant les tâches fastidieuses.</div>
+                <div class="top_text">Avec Kanply, la conformité devient un party... ou au moins vous aurez plus de temps pour le faire&nbsp;!</div>
+                <button class="subscribe_button">Inscrivez-vous sur la liste d'attente</button>
+                <button class="contact_button">Contactez-nous</button>
+                <div>
+                    <img id="screenshot" src="images/dashboard.png" alt="Kanply's dashboard">
+                </div>
+            </div>
+
+        <div class="center">
+            <div class="center_title">Comment Kanply vous aidera&nbsp;?</div>
+            <div class="center_items">
+                <div class="center_item">
+                    <div class="image">
+                        <img class="logo" src="images/icon_compliance.png" alt="Compliance icon">
+                    </div>
+                    <div class="subtext">Kanply établiera d'abord la liste de vos obligations légales et règlementaires.  Il vous aidera également à formuler les objectifs en matière de sécurité de l'information appropriés à votre organisation.</div>
+                </div>
+                <div class="center_item">
+                    <div class="image">
+                        <img class="logo" src="images/icon_checklist.png" alt="Checklist icon">
+                    </div>
+                    <div class="subtext">En fonction de vos objectifs, des mesures que vous avez déjà mises en place et de votre capacité opérationnelle, Kanply créera un plan d'action sur mesure, qu'il ajustera en continu.</div>
+                </div>
+                <div class="center_item">
+                    <div class="image">
+                        <img class="logo" src="images/icon_event.png" alt="Calendar icon">
+                    </div>
+                    <div class="subtext">Le calendrier de livraison des tâches sera géré par Kanply de façon à respecter vos objectifs et vos obligations. </div>
+                </div>
+                <div class="center_item">
+                    <div class="image">
+                        <img class="logo" src="images/icon_team.png" alt="Colaboration icon">
+                    </div>
+                    <div class="subtext">Kanply assignera les tâches à l'intérieur de votre organisation ou à l'externe.  En plus de coordonner les efforts et de faire les suivis, il offrira le support et la formation requises à la réalisation des tâches.</div>
+                </div>
+            </div>
+        </div>
+
+            <footer>
+            Copyright © Kanply 2023
+            </footer>
+    </div>
+   </body>
+ </html>
