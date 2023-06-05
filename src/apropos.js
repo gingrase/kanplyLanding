@@ -8,7 +8,7 @@ function generateAProposContent() {
         center.classList = "center";
         const title = document.createElement('div');
             title.classList = "center_title";
-            title.innerHTML = 'Comment Kanply vous aidera&nbsp;?';
+            title.innerHTML = 'Comment Kanply vous&nbsp;aidera&nbsp;?';
         center.appendChild(title);
         const itemContainer = document.createElement('div');
             itemContainer.classList = "center_items";
