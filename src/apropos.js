@@ -9,7 +9,7 @@ function generateAProposContent() {
         const title = document.createElement('div');
             title.classList = "center_title";
             title.innerHTML = 'Comment Kanply vous&nbsp;aidera&nbsp;?';
-        center.appendChild(title);
+    center.appendChild(title);
         const itemContainer = document.createElement('div');
             itemContainer.classList = "center_items";
             const itemCompliance = document.createElement('div');
@@ -73,6 +73,31 @@ function generateAProposContent() {
             itemColaboration.appendChild(itemColaborationDesc);
         itemContainer.appendChild(itemColaboration);
     center.appendChild(itemContainer);
+
+    const subtitle = document.createElement('div');
+            subtitle.classList = "center_title";
+            subtitle.innerHTML = 'De plus, kanply vous permet :';
+    center.appendChild(subtitle);
+// Change the following section to be generated with a loop from a text/json file
+        const featureContainer = document.createElement('div');
+            featureContainer.classList = "center_items";
+            const featureCompliance = document.createElement('div');
+                featureCompliance.classList = 'center_item';
+                const featureComplianceImageContainer = document.createElement('div');
+                    featureComplianceImageContainer.classList = 'image';
+                    const iconRegistreImage = new Image();
+                        iconRegistreImage.src = icon_compliance;
+                        iconRegistreImage.alt = "Compliance Icon";
+                        iconRegistreImage.classList = "logo";
+                    featureComplianceImageContainer.appendChild(iconRegistreImage);
+                const featureComplianceDesc = document.createElement('div');
+                    featureComplianceDesc.classList = 'subtext';
+                    featureComplianceDesc.innerHTML = "Conserver en sécurité l'historique de vos incidents"; 
+            featureCompliance.appendChild(featureComplianceImageContainer);
+            featureCompliance.appendChild(featureComplianceDesc);
+        featureContainer.appendChild(featureCompliance);
+    center.appendChild(featureContainer);
+
     return center.outerHTML;
 }
 

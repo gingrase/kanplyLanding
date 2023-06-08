@@ -1,4 +1,4 @@
-import hero_logo from './images/automation_green.png';
+import hero_logo from './images/logo-kanply_v3_green.png';
 import hero_image from './images/logo-kanply-long.png';
 import screenshot_image from './images/dashboard.png';
 

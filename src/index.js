@@ -51,4 +51,5 @@ document.body.appendChild(generateHeader());
 document.body.appendChild(generateContent());
 document.body.appendChild(generateFooter());
 
+
 document.getElementById("content").innerHTML = generateHomeContent();
