@@ -3,6 +3,7 @@ import logoImage from './images/logo-kanply-square.png';
 import generateHomeContent from './home.js';
 import generateAProposContent from './apropos.js';
 import generateLoginContent from './login.js';
+import generatePasswordContent from './password.js';
 
 function generateHeader() {
   const header = document.createElement('header');
@@ -24,7 +25,16 @@ function generateHeader() {
         const menuItemLogin = document.createElement('li');
           menuItemLogin.classList = "menuItemLogin";
           menuItemLogin.innerHTML = 'Connexion';
-          menuItemLogin.addEventListener("click", function(){ document.getElementById("content").innerHTML = generateLoginContent() });
+          menuItemLogin.addEventListener("click", 
+            function() { 
+              document.getElementById("content").innerHTML = generateLoginContent(); 
+              document.getElementById("nextButton").addEventListener("click", 
+                function() {
+                  document.getElementById("content").innerHTML = generatePasswordContent(document.getElementById('usernameField').value); 
+                } 
+              ) 
+            }
+          );
       menuItemList.appendChild(menuItemLogin);
         const menuItemLang = document.createElement('li');
           menuItemLang.classList = "menuItemLang";
@@ -50,6 +60,5 @@ function generateFooter() {
 document.body.appendChild(generateHeader());
 document.body.appendChild(generateContent());
 document.body.appendChild(generateFooter());
-
 
 document.getElementById("content").innerHTML = generateHomeContent();

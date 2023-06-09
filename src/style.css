@@ -204,28 +204,8 @@ ul {
     font-family: FiraSans;
     color: deepskyblue;
     padding-top: 20px;
-    padding-bottom: 20px;
+/*    padding-bottom: 20px;*/
 }
-
-.usernameInput {
-    text-align: left;
-}
-
-.usernameInput label {
-    margin-left: 5px;
-}
-
-.usernameInput input {
-    display: block;
-    width: 350px;
-    border-radius: 5px;
-    padding: 1rem;
-    font-size: 18px;
-}
-
-.usernameInput > input::placeholder {
-    opacity: 0.5;
-}  
 
 .loginText {
     color: skyblue;
@@ -265,6 +245,44 @@ ul {
     color: deepskyblue;
 }
 
+.errorMessage {
+    display: none;
+    color: lightcoral;  
+    position: absolute;
+    padding-top: 4px;
+}
+
+.usernameInput {
+    text-align: left;
+}
+
+.usernameInput label {
+    margin-left: 5px;
+}
+
+.usernameInput input {
+    display: block;
+    width: 350px;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 18px;
+}
+
+.usernameInput > input::placeholder {
+    opacity: 0.5;
+}  
+
+.usernameInput > input:invalid:not(:placeholder-shown) + .errorMessage {
+    display: block;
+}
+
+.usernamePlaceholder {
+    color: deepskyblue;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    margin-bottom: 10px;
+}
 
 
 footer {

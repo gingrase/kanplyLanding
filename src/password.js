@@ -1,7 +1,7 @@
 import login_logo from './images/logo-kanply_v3_white.png';
 import login_image from './images/logo-kanply-long.png';
 
-function generateLoginContent() {
+function generatePasswordContent(username) {
     const login = document.createElement('div');
     login.classList = "login";
 
@@ -30,15 +30,15 @@ function generateLoginContent() {
 
                 const loginDesc = document.createElement('div');
                     loginDesc.classList = 'loginTitle';
-                    loginDesc.innerHTML = "Connexion"; 
+                    loginDesc.innerHTML = 'Bienvenue'; 
 
             loginBox.appendChild(loginDesc);
 
-                const usernamePlaceholder = document.createElement('p');
-                    usernamePlaceholder.classList = 'usernamePlaceholder';
-                    usernamePlaceholder.innerHTML = "</br>";
+                const loginDescUsername = document.createElement('p');
+                    loginDescUsername.classList = 'usernamePlaceholder';
+                    loginDescUsername.innerHTML = username + "</br>"; 
 
-            loginBox.appendChild(usernamePlaceholder);
+            loginBox.appendChild(loginDescUsername);
 
                 const loginForm = document.createElement('form');
                     loginForm.setAttribute("action", "");
@@ -46,25 +46,21 @@ function generateLoginContent() {
                     loginForm.classList = 'loginForm';
                     const loginFieldset = document.createElement('div');
                         loginFieldset.classList = 'loginFieldset';
-                        const usernameInput = document.createElement('div');
-                            usernameInput.classList = 'usernameInput';
-                            const usernameLabel = document.createElement('label');
-                                usernameLabel.setAttribute("for", "username");
-                                usernameLabel.innerHTML = "Courriel";
-                        usernameInput.appendChild(usernameLabel);
-                            const usernameField = document.createElement('input');
-                                usernameField.id = "usernameField";
-                                usernameField.setAttribute("type", "text");
-                                usernameField.setAttribute("name", "username");
-                                usernameField.setAttribute("placeholder", "joe@example.com");
-                                usernameField.setAttribute("pattern", "^[a-zA-Z0-9]+@[a-zA-Z0-9]+$");
-                                usernameField.setAttribute("required", "");
-                        usernameInput.appendChild(usernameField);
-                            const usernameError = document.createElement('div');
-                                usernameError.classList = 'errorMessage';
-                                usernameError.innerHTML = "Entrez une adresse courriel valide";
-                        usernameInput.appendChild(usernameError);
-                    loginFieldset.appendChild(usernameInput);
+                        const passwordInput = document.createElement('div');
+                            passwordInput.classList = 'usernameInput';
+                            const passwordLabel = document.createElement('label');
+                                passwordLabel.setAttribute("for", "password");
+                                passwordLabel.innerHTML = "Mot de passe";
+                        passwordInput.appendChild(passwordLabel);
+                            const passwordField = document.createElement('input');
+                                passwordField.setAttribute("type", "password");
+                                passwordField.setAttribute("name", "password");
+                        passwordInput.appendChild(passwordField);
+                            const passwordError = document.createElement('div');
+                                passwordError.classList = 'errorMessage';
+                                passwordError.innerHTML = "Entrez une adresse courriel valide";
+                        passwordInput.appendChild(passwordError);
+                    loginFieldset.appendChild(passwordInput);
                 loginForm.appendChild(loginFieldset);    
                     const loginButton = document.createElement('div');
                         loginButton.classList = 'loginButton';
@@ -78,7 +74,7 @@ function generateLoginContent() {
 
                 const forgotUsername = document.createElement('div');
                     forgotUsername.classList = 'loginText';
-                    forgotUsername.innerHTML = "Adresse de courriel oubliée ?"; 
+                    forgotUsername.innerHTML = "Mot de passe oublié ?"; 
 
             loginBox.appendChild(forgotUsername);
 
@@ -107,4 +103,4 @@ function generateLoginContent() {
     return login.outerHTML;
 }
 
-export default generateLoginContent;
+export default generatePasswordContent;
