@@ -57,18 +57,14 @@ function generateFooter() {
   return footer;
 }
 
-
-
-/* ****************************************************************** */
-
-/* ****************************************************************** */
-
-const page = document.createElement('div');
-page.classList = 'page';
-page.appendChild(generateHeader());
-page.appendChild(generateContent());
-page.appendChild(generateFooter());
+/* ********************************************************* */
+/* ********************* Generate pages ******************** */
+/* ********************************************************* */
+  const page = document.createElement('div');
+    page.classList = 'page';
+  page.appendChild(generateHeader());
+  page.appendChild(generateContent());
+  page.appendChild(generateFooter());
 
 document.body.appendChild(page);
-
-document.getElementById("content").innerHTML = generateHomeContent();
+  document.getElementById("content").innerHTML = generateHomeContent();
